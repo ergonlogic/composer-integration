@@ -14,6 +14,10 @@ use GuzzleHttp\Psr7\Utils;
 use Tuf\Client\GuzzleFileFetcher;
 use Tuf\Exception\NotFoundException;
 
+$vendor_dir = dirname(dirname(dirname(__DIR__)));
+include_once($vendor_dir . '/guzzlehttp/guzzle/src/functions.php');
+include_once($vendor_dir . '/guzzlehttp/psr7/src/functions.php');
+
 /**
  * Defines a Composer repository that is protected by TUF.
  */
